@@ -1,0 +1,18 @@
+{{!-- Query --}}
+<div class="">
+    {{#if Query}}
+    <ul>
+        {{#each Query}}
+            <li  class="flex justify-between items-center border w-full py-2 m-0 ">{{this.field}} <span class="hover:cursor-pointer rotate-90 ">...</span></li>
+        {{/each}}
+    </ul>
+    {{/if}}
+
+</div>
+<div>
+    <form action="/blocks" method="POST" class="">
+        {{!-- enviado a ./routes/post --}}
+        <input class="border p-2 w-full bg-transparent" type="text" placeholder="..." name="field">
+        {{!-- <button type="submit">enviar</button> --}}
+    </form>
+</div>
